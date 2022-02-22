@@ -63,9 +63,12 @@
 }
 
 /* Widths and heights */
-
 .wd-width-80 {
     width: 80%;
+}
+
+.wd-width-100 {
+    width: 100px;
 }
 
 .wd-width-504 {
@@ -74,6 +77,14 @@
 
 .wd-width-126 {
     width: 126px;
+}
+
+.wd-width-95 {
+    width: 95%;
+}
+
+.wd-width-full {
+    width: 100%;
 }
 
 .wd-max-width-506 {
@@ -134,7 +145,7 @@
 }
 
 .wd-border-color {
-    border-color: rgb(47, 51, 54);
+    border-color: lightgray;
 }
 
 .wd-bottom-border-color-highlight {
@@ -234,4 +245,26 @@
     width: 48px;
     height: 48px;
     border-radius: 24px;
+}
+
+/* Positions */
+
+.wd-top-470px {
+    top: 470px;
+}
+
+.wd-top-410px {
+    top: 410px;
+}
+
+.wd-top-400px {
+    top: 400px;
+}
+
+.wd-top-430px {
+    top: 430px;
+}
+
+.wd-top-330px {
+    top: 330px;
 }
