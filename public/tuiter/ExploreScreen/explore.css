@@ -1,0 +1,29 @@
+.wd-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.wd-width-95 {
+    width: 95%;
+}
+
+.wd-width-100 {
+    width: 100px;
+}
+
+/* Colors */
+.wd-color-light-grey {
+    color: rgb(110, 118, 125);
+}
+
+/* Positions */
+
+.wd-bottom-5px {
+    bottom: 5px;
+}
+
+.wd-left-10px {
+    left: 10px;
+}
