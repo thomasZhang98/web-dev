@@ -1,12 +1,10 @@
 import React from "react";
 import {useDispatch} from "react-redux";
+import {deleteTuit} from "../../actions/tuits-actions";
 import TuitStats from "../../TuitStats/tuit-stats"
 
 const TuitListItem = ({tuit}) => {
     const dispatch = useDispatch();
-    const deleteTuit = (tuit) => {
-        dispatch({type: 'delete-tuit', tuit})
-    };
     return (
         <li className="list-group-item d-flex">
             <img src={tuit["avatar-image"]} className="wd-avatar me-3"/>
@@ -19,7 +17,8 @@ const TuitListItem = ({tuit}) => {
                     </div>
 
                     <div>
-                        <i onClick={() => deleteTuit(tuit)} className="fas fa-remove"></i>
+                        <i className="fas fa-remove float-end"
+                           onClick={() => deleteTuit(dispatch, tuit)}></i>
                     </div>
                 </div>
 
@@ -31,12 +30,7 @@ const TuitListItem = ({tuit}) => {
                 {"attachments" in tuit && "image" in tuit.attachments &&
                     <img src={tuit.attachments.image} className="w-100 wd-rounded-corners-all-around-20 mt-2"/>}
 
-                <div className="d-flex mt-3">
-                    <span className={"w-25"}><i className="fas fa-comment me-2"></i>{tuit.stats.comments}</span>
-                    <span className={"w-25"}><i className="fas fa-retweet me-2"></i>{tuit.stats.retuits}</span>
-                    <TuitStats tuit={tuit}/>
-                    <span className={"w-25"}><i className="fas fa-arrow-up-from-bracket"></i></span>
-                </div>
+                <TuitStats tuit={tuit}/>
             </div>
             <div className="wd-grid-row"></div>
         </li>
