@@ -4,8 +4,8 @@ const tuitsReducer = (state = [], action) => {
     switch (action.type) {
         case CREATE_TUIT:
             return [
-                action.newTuit,
-                ...state
+                ...state,
+                action.newTuit
             ];
         case DELETE_TUIT:
             return state.filter(tuit => tuit._id !== action.tuit._id);
