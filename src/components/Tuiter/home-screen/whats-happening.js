@@ -7,6 +7,10 @@ const WhatsHappening = () => {
         tuit: 'New tuit',
         postedBy: {username: 'Thomas'},
         handle: "thomas",
+        comments: 0,
+        retuits: 0,
+        likes: 0,
+        dislikes: 0,
         "avatar-image": '/tuiter/images/profile.jpg'
     });
     const dispatch = useDispatch();
